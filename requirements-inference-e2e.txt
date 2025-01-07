@@ -1,0 +1,6 @@
+pypinyin
+pycwt
+praat-parselmouth
+webrtcvad
+pyloudnorm
+pytorch-lightning
