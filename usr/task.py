@@ -1,6 +1,6 @@
 import torch
 
-import utils
+import diffsinger.utils
 from .diff.diffusion import GaussianDiffusion
 from .diff.net import DiffNet
 from tasks.tts.fs2 import FastSpeech2Task

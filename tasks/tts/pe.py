@@ -8,7 +8,7 @@ import os
 from tasks.base_task import BaseDataset
 from tasks.tts.fs2 import FastSpeech2Task
 from diffsinger.modules.fastspeech.pe import PitchExtractor
-import utils
+import diffsinger.utils
 from diffsinger.utils.indexed_datasets import IndexedDataset
 from diffsinger.utils.hparams import hparams
 from diffsinger.utils.plot import f0_to_figure

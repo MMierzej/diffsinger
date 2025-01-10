@@ -6,7 +6,7 @@ import re
 import librosa
 import torch
 
-import utils
+import diffsinger.utils
 from diffsinger.modules.hifigan.hifigan import HifiGanGenerator
 from diffsinger.utils.hparams import hparams, set_hparams
 from diffsinger.vocoders.base_vocoder import register_vocoder
