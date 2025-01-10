@@ -4,7 +4,7 @@ import utils
 from .diff.diffusion import GaussianDiffusion
 from .diff.net import DiffNet
 from tasks.tts.fs2 import FastSpeech2Task
-from utils.hparams import hparams
+from diffsinger.utils.hparams import hparams
 
 
 DIFF_DECODERS = {

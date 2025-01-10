@@ -1,10 +1,10 @@
-from modules.commons.common_layers import *
-from modules.commons.common_layers import Embedding
-from modules.fastspeech.tts_modules import FastspeechDecoder, DurationPredictor, LengthRegulator, PitchPredictor, \
+from diffsinger.modules.commons.common_layers import *
+from diffsinger.modules.commons.common_layers import Embedding
+from diffsinger.modules.fastspeech.tts_modules import FastspeechDecoder, DurationPredictor, LengthRegulator, PitchPredictor, \
     EnergyPredictor, FastspeechEncoder
-from utils.cwt import cwt2f0
-from utils.hparams import hparams
-from utils.pitch_utils import f0_to_coarse, denorm_f0, norm_f0
+from diffsinger.utils.cwt import cwt2f0
+from diffsinger.utils.hparams import hparams
+from diffsinger.utils.pitch_utils import f0_to_coarse, denorm_f0, norm_f0
 
 FS_ENCODERS = {
     'fft': lambda hp, embed_tokens, d: FastspeechEncoder(
@@ -164,7 +164,7 @@ class FastSpeech2(nn.Module):
             ret['dur'] = xs
             ret['dur_choice'] = dur
             mel2ph = self.length_regulator(dur, src_padding).detach()
-            # from modules.fastspeech.fake_modules import FakeLengthRegulator
+            # from diffsinger.modules.fastspeech.fake_modules import FakeLengthRegulator
             # fake_lr = FakeLengthRegulator()
             # fake_mel2ph = fake_lr(dur, (1 - src_padding.long()).sum(-1))[..., 0].detach()
             # print(mel2ph == fake_mel2ph)

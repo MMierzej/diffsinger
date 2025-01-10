@@ -1,1 +1,1 @@
-from vocoders import hifigan
+from diffsinger.vocoders import hifigan

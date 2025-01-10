@@ -2,10 +2,10 @@ from multiprocessing.pool import Pool
 
 import matplotlib
 
-from utils.pl_utils import data_loader
-from utils.training_utils import RSQRTSchedule
-from vocoders.base_vocoder import get_vocoder_cls, BaseVocoder
-from modules.fastspeech.pe import PitchExtractor
+from diffsinger.utils.pl_utils import data_loader
+from diffsinger.utils.training_utils import RSQRTSchedule
+from diffsinger.vocoders.base_vocoder import get_vocoder_cls, BaseVocoder
+from diffsinger.modules.fastspeech.pe import PitchExtractor
 
 matplotlib.use('Agg')
 import os
@@ -14,8 +14,8 @@ from tqdm import tqdm
 import torch.distributed as dist
 
 from tasks.base_task import BaseTask
-from utils.hparams import hparams
-from utils.text_encoder import TokenTextEncoder
+from diffsinger.utils.hparams import hparams
+from diffsinger.utils.text_encoder import TokenTextEncoder
 import json
 
 import torch

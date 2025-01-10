@@ -7,7 +7,7 @@ import torch.nn.functional as F
 from math import sqrt
 
 from .diffusion import Mish
-from utils.hparams import hparams
+from diffsinger.utils.hparams import hparams
 
 Linear = nn.Linear
 ConvTranspose2d = nn.ConvTranspose2d

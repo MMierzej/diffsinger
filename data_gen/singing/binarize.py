@@ -16,13 +16,13 @@ from scipy.interpolate import interp1d
 import torch
 from textgrid import TextGrid
 
-from utils.hparams import hparams
+from diffsinger.utils.hparams import hparams
 from data_gen.tts.data_gen_utils import build_phone_encoder, get_pitch
-from utils.pitch_utils import f0_to_coarse
+from diffsinger.utils.pitch_utils import f0_to_coarse
 from data_gen.tts.base_binarizer import BaseBinarizer, BinarizationError
 from data_gen.tts.binarizer_zh import ZhBinarizer
 from data_gen.tts.txt_processors.zh_g2pM import ALL_YUNMU
-from vocoders.base_vocoder import VOCODERS
+from diffsinger.vocoders.base_vocoder import VOCODERS
 
 
 class SingingBinarizer(BaseBinarizer):

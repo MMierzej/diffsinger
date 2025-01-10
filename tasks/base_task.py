@@ -7,13 +7,13 @@ import matplotlib
 
 matplotlib.use('Agg')
 
-from utils.hparams import hparams, set_hparams
+from diffsinger.utils.hparams import hparams, set_hparams
 import random
 import sys
 import numpy as np
 import torch.distributed as dist
 from pytorch_lightning.loggers import TensorBoardLogger
-from utils.pl_utils import LatestModelCheckpoint, BaseTrainer, data_loader, DDP
+from diffsinger.utils.pl_utils import LatestModelCheckpoint, BaseTrainer, data_loader, DDP
 from torch import nn
 import torch.utils.data
 import utils

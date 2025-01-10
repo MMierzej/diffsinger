@@ -5,7 +5,7 @@ os.environ["OMP_NUM_THREADS"] = "1"
 from data_gen.tts.txt_processors.zh_g2pM import ALL_SHENMU
 from data_gen.tts.base_binarizer import BaseBinarizer, BinarizationError
 from data_gen.tts.data_gen_utils import get_mel2ph
-from utils.hparams import set_hparams, hparams
+from diffsinger.utils.hparams import set_hparams, hparams
 import numpy as np
 
 
