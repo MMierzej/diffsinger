@@ -3,4 +3,4 @@ pycwt
 praat-parselmouth
 webrtcvad
 pyloudnorm
-pytorch-lightning
+pytorch-lightning==2.1.4
