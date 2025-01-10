@@ -7,7 +7,7 @@ import traceback
 import json
 from resemblyzer import VoiceEncoder
 from tqdm import tqdm
-from data_gen.tts.data_gen_utils import get_mel2ph, get_pitch, build_phone_encoder
+from diffsinger.data_gen.tts.data_gen_utils import get_mel2ph, get_pitch, build_phone_encoder
 from diffsinger.utils.hparams import set_hparams, hparams
 import numpy as np
 from diffsinger.utils.indexed_datasets import IndexedDatasetBuilder

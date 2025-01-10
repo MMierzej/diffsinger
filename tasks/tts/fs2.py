@@ -4,7 +4,7 @@ matplotlib.use('Agg')
 
 from diffsinger.utils import audio
 import matplotlib.pyplot as plt
-from data_gen.tts.data_gen_utils import get_pitch
+from diffsinger.data_gen.tts.data_gen_utils import get_pitch
 from diffsinger.tasks.tts.fs2_utils import FastSpeechDataset
 from diffsinger.utils.cwt import cwt2f0
 from diffsinger.utils.pl_utils import data_loader

@@ -17,11 +17,11 @@ import torch
 from textgrid import TextGrid
 
 from diffsinger.utils.hparams import hparams
-from data_gen.tts.data_gen_utils import build_phone_encoder, get_pitch
+from diffsinger.data_gen.tts.data_gen_utils import build_phone_encoder, get_pitch
 from diffsinger.utils.pitch_utils import f0_to_coarse
-from data_gen.tts.base_binarizer import BaseBinarizer, BinarizationError
-from data_gen.tts.binarizer_zh import ZhBinarizer
-from data_gen.tts.txt_processors.zh_g2pM import ALL_YUNMU
+from diffsinger.data_gen.tts.base_binarizer import BaseBinarizer, BinarizationError
+from diffsinger.data_gen.tts.binarizer_zh import ZhBinarizer
+from diffsinger.data_gen.tts.txt_processors.zh_g2pM import ALL_YUNMU
 from diffsinger.vocoders.base_vocoder import VOCODERS
 
 
