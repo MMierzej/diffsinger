@@ -11,7 +11,7 @@ import torch.utils.data
 from diffsinger.utils.indexed_datasets import IndexedDataset
 from diffsinger.utils.pitch_utils import norm_interp_f0
 import numpy as np
-from tasks.base_task import BaseDataset
+from diffsinger.tasks.base_task import BaseDataset
 import torch
 import torch.optim
 import torch.utils.data

@@ -13,7 +13,7 @@ import numpy as np
 from tqdm import tqdm
 import torch.distributed as dist
 
-from tasks.base_task import BaseTask
+from diffsinger.tasks.base_task import BaseTask
 from diffsinger.utils.hparams import hparams
 from diffsinger.utils.text_encoder import TokenTextEncoder
 import json

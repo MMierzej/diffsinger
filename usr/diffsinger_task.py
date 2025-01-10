@@ -13,8 +13,8 @@ from diffsinger.modules.fastspeech.tts_modules import mel2ph_to_dur
 
 from diffsinger.usr.diff.candidate_decoder import FFT
 from diffsinger.utils.pitch_utils import denorm_f0
-from tasks.tts.fs2_utils import FastSpeechDataset
-from tasks.tts.fs2 import FastSpeech2Task
+from diffsinger.tasks.tts.fs2_utils import FastSpeechDataset
+from diffsinger.tasks.tts.fs2 import FastSpeech2Task
 
 import numpy as np
 import os
