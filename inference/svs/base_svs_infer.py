@@ -237,7 +237,7 @@ class BaseSVSInfer:
         from diffsinger.utils.audio import save_wav
         set_hparams(print_hparams=False)
         infer_ins = cls(hparams)
-        out = infer_ins.infer_once(input_ds)
+        out = infer_ins.infer_once(inp)
         os.makedirs('infer_out', exist_ok=True)
         save_wav(out, f'infer_out/example_out.wav', hparams['audio_sample_rate'])
 
