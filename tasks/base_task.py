@@ -16,7 +16,7 @@ from pytorch_lightning.loggers import TensorBoardLogger
 from diffsinger.utils.pl_utils import LatestModelCheckpoint, BaseTrainer, data_loader, DDP
 from torch import nn
 import torch.utils.data
-import diffsinger.utils
+import diffsinger.utils as utils
 import logging
 import os
 

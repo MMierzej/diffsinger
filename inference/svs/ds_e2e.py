@@ -7,7 +7,7 @@ from diffsinger.utils.hparams import hparams
 from diffsinger.usr.diff.shallow_diffusion_tts import GaussianDiffusion
 from diffsinger.usr.diffsinger_task import DIFF_DECODERS
 from diffsinger.modules.fastspeech.pe import PitchExtractor
-import diffsinger.utils
+import diffsinger.utils as utils
 
 
 class DiffSingerE2EInfer(BaseSVSInfer):

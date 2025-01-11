@@ -21,7 +21,7 @@ import torch
 import torch.optim
 import torch.utils.data
 import torch.nn.functional as F
-import diffsinger.utils
+import diffsinger.utils as utils
 import torch.distributions
 import numpy as np
 from diffsinger.modules.commons.ssim import ssim

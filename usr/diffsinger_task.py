@@ -1,6 +1,6 @@
 import torch
 
-import diffsinger.utils
+import diffsinger.utils as utils
 from diffsinger.utils.hparams import hparams
 from .diff.net import DiffNet
 from .diff.shallow_diffusion_tts import GaussianDiffusion, OfflineGaussianDiffusion

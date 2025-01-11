@@ -15,7 +15,7 @@ from diffsinger.tasks.base_task import BaseDataset
 import torch
 import torch.optim
 import torch.utils.data
-import diffsinger.utils
+import diffsinger.utils as utils
 import torch.distributions
 from diffsinger.utils.hparams import hparams
 

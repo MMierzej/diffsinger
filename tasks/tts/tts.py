@@ -21,7 +21,7 @@ import json
 import torch
 import torch.optim
 import torch.utils.data
-import diffsinger.utils
+import diffsinger.utils as utils
 
 
 
