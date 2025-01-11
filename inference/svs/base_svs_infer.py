@@ -1,5 +1,4 @@
 import os
-import random
 
 import torch
 import numpy as np
@@ -235,7 +234,7 @@ class BaseSVSInfer:
     @classmethod
     def example_run(cls, inp):
         from diffsinger.utils.audio import save_wav
-        set_hparams(print_hparams=False)
+        # set_hparams(print_hparams=False)
         infer_ins = cls(hparams)
         out = infer_ins.infer_once(inp)
         os.makedirs('infer_out', exist_ok=True)
