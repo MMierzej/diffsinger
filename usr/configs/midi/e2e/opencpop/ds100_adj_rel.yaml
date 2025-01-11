@@ -1,6 +1,6 @@
 base_config:
-  - diffsinger/usr/configs/popcs_ds_beta6.yaml
-  - diffsinger/usr/configs/midi/cascade/opencs/opencpop_statis.yaml
+  - usr/configs/popcs_ds_beta6.yaml
+  - usr/configs/midi/cascade/opencs/opencpop_statis.yaml
 
 binarizer_cls: data_gen.singing.binarize.OpencpopBinarizer
 binary_data_dir: 'data/binary/opencpop-midi-dp'

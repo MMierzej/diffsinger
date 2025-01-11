@@ -1,6 +1,6 @@
 base_config:
-  - diffsinger/configs/tts/fs2.yaml
-  - diffsinger/configs/singing/base.yaml
+  - configs/tts/fs2.yaml
+  - configs/singing/base.yaml
   - ./base.yaml
 
 audio_sample_rate: 24000
