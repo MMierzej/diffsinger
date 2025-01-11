@@ -8,7 +8,6 @@ from diffsinger.vocoders.hifigan import HifiGAN
 from diffsinger.inference.svs.opencpop.map import cpop_pinyin2ph_func
 
 from diffsinger.utils import load_ckpt
-from diffsinger.utils.audio import save_wav
 from diffsinger.utils.hparams import set_hparams, hparams
 from diffsinger.utils.text_encoder import TokenTextEncoder
 from pypinyin import pinyin, lazy_pinyin, Style
@@ -234,15 +233,13 @@ class BaseSVSInfer:
         return output
 
     @classmethod
-    def example_run(cls, input_ds, out_dir="diffsinger_output", config=None, exp_name=None):
-        if config is not None and exp_name is not None:
-            set_hparams(config=config, exp_name=exp_name, print_hparams=False)
+    def example_run(cls, inp):
+        from diffsinger.utils.audio import save_wav
+        set_hparams(print_hparams=False)
         infer_ins = cls(hparams)
         out = infer_ins.infer_once(input_ds)
-        os.makedirs(out_dir, exist_ok=True)
-        output_path = f'{out_dir}/{random.randint(0, 2147483647):010d}.wav'
-        save_wav(out, output_path, hparams['audio_sample_rate'])
-        return out, output_path
+        os.makedirs('infer_out', exist_ok=True)
+        save_wav(out, f'infer_out/example_out.wav', hparams['audio_sample_rate'])
 
 
 # if __name__ == '__main__':
