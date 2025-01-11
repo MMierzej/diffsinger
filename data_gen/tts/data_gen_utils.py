@@ -6,14 +6,14 @@ import parselmouth
 import os
 import torch
 from skimage.transform import resize
-from utils.text_encoder import TokenTextEncoder
-from utils.pitch_utils import f0_to_coarse
+from diffsinger.utils.text_encoder import TokenTextEncoder
+from diffsinger.utils.pitch_utils import f0_to_coarse
 import struct
 import webrtcvad
 from scipy.ndimage.morphology import binary_dilation
 import librosa
 import numpy as np
-from utils import audio
+from diffsinger.utils import audio
 import pyloudnorm as pyln
 import re
 import json

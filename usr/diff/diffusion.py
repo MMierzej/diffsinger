@@ -10,9 +10,9 @@ from torch import nn
 from tqdm import tqdm
 from einops import rearrange
 
-from modules.fastspeech.fs2 import FastSpeech2
-from modules.diffsinger_midi.fs2 import FastSpeech2MIDI
-from utils.hparams import hparams
+from diffsinger.modules.fastspeech.fs2 import FastSpeech2
+from diffsinger.modules.diffsinger_midi.fs2 import FastSpeech2MIDI
+from diffsinger.utils.hparams import hparams
 
 
 

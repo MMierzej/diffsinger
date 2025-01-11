@@ -5,11 +5,11 @@ import torch
 import yaml
 from sklearn.preprocessing import StandardScaler
 from torch import nn
-from modules.parallel_wavegan.models import ParallelWaveGANGenerator
-from modules.parallel_wavegan.utils import read_hdf5
-from utils.hparams import hparams
-from utils.pitch_utils import f0_to_coarse
-from vocoders.base_vocoder import BaseVocoder, register_vocoder
+from diffsinger.modules.parallel_wavegan.models import ParallelWaveGANGenerator
+from diffsinger.modules.parallel_wavegan.utils import read_hdf5
+from diffsinger.utils.hparams import hparams
+from diffsinger.utils.pitch_utils import f0_to_coarse
+from diffsinger.vocoders.base_vocoder import BaseVocoder, register_vocoder
 import numpy as np
 
 
@@ -104,7 +104,7 @@ class PWG(BaseVocoder):
 
     @staticmethod
     def wav2spec(wav_fn, return_linear=False):
-        from data_gen.tts.data_gen_utils import process_utterance
+        from diffsinger.data_gen.tts.data_gen_utils import process_utterance
         res = process_utterance(
             wav_fn, fft_size=hparams['fft_size'],
             hop_size=hparams['hop_size'],

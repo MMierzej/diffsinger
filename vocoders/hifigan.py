@@ -6,12 +6,12 @@ import re
 import librosa
 import torch
 
-import utils
-from modules.hifigan.hifigan import HifiGanGenerator
-from utils.hparams import hparams, set_hparams
-from vocoders.base_vocoder import register_vocoder
-from vocoders.pwg import PWG
-from vocoders.vocoder_utils import denoise
+import diffsinger.utils as utils
+from diffsinger.modules.hifigan.hifigan import HifiGanGenerator
+from diffsinger.utils.hparams import hparams, set_hparams
+from diffsinger.vocoders.base_vocoder import register_vocoder
+from diffsinger.vocoders.pwg import PWG
+from diffsinger.vocoders.vocoder_utils import denoise
 
 
 def load_model(config_path, checkpoint_path):

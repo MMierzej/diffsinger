@@ -1,11 +1,11 @@
-from modules.commons.common_layers import *
-from modules.commons.common_layers import Embedding
-from modules.fastspeech.tts_modules import FastspeechDecoder, DurationPredictor, LengthRegulator, PitchPredictor, \
+from diffsinger.modules.commons.common_layers import *
+from diffsinger.modules.commons.common_layers import Embedding
+from diffsinger.modules.fastspeech.tts_modules import FastspeechDecoder, DurationPredictor, LengthRegulator, PitchPredictor, \
     EnergyPredictor, FastspeechEncoder
-from utils.cwt import cwt2f0
-from utils.hparams import hparams
-from utils.pitch_utils import f0_to_coarse, denorm_f0, norm_f0
-from modules.fastspeech.fs2 import FastSpeech2
+from diffsinger.utils.cwt import cwt2f0
+from diffsinger.utils.hparams import hparams
+from diffsinger.utils.pitch_utils import f0_to_coarse, denorm_f0, norm_f0
+from diffsinger.modules.fastspeech.fs2 import FastSpeech2
 
 
 class FastspeechMIDIEncoder(FastspeechEncoder):

@@ -1,7 +1,7 @@
-from modules.commons.common_layers import *
-from utils.hparams import hparams
-from modules.fastspeech.tts_modules import PitchPredictor
-from utils.pitch_utils import denorm_f0
+from diffsinger.modules.commons.common_layers import *
+from diffsinger.utils.hparams import hparams
+from diffsinger.modules.fastspeech.tts_modules import PitchPredictor
+from diffsinger.utils.pitch_utils import denorm_f0
 
 
 class Prenet(nn.Module):

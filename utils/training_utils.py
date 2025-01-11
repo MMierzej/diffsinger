@@ -1,4 +1,4 @@
-from utils.hparams import hparams
+from diffsinger.utils.hparams import hparams
 
 
 class RSQRTSchedule(object):

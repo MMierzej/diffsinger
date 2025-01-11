@@ -5,9 +5,9 @@ import gradio as gr
 import yaml
 from gradio.inputs import Textbox
 
-from inference.svs.base_svs_infer import BaseSVSInfer
-from utils.hparams import set_hparams
-from utils.hparams import hparams as hp
+from diffsinger.inference.svs.base_svs_infer import BaseSVSInfer
+from diffsinger.utils.hparams import set_hparams
+from diffsinger.utils.hparams import hparams as hp
 import numpy as np
 
 

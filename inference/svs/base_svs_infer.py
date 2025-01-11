@@ -2,13 +2,13 @@ import os
 
 import torch
 import numpy as np
-from modules.hifigan.hifigan import HifiGanGenerator
-from vocoders.hifigan import HifiGAN
-from inference.svs.opencpop.map import cpop_pinyin2ph_func
+from diffsinger.modules.hifigan.hifigan import HifiGanGenerator
+from diffsinger.vocoders.hifigan import HifiGAN
+from diffsinger.inference.svs.opencpop.map import cpop_pinyin2ph_func
 
-from utils import load_ckpt
-from utils.hparams import set_hparams, hparams
-from utils.text_encoder import TokenTextEncoder
+from diffsinger.utils import load_ckpt
+from diffsinger.utils.hparams import set_hparams, hparams
+from diffsinger.utils.text_encoder import TokenTextEncoder
 from pypinyin import pinyin, lazy_pinyin, Style
 import librosa
 import glob
@@ -233,7 +233,7 @@ class BaseSVSInfer:
 
     @classmethod
     def example_run(cls, inp):
-        from utils.audio import save_wav
+        from diffsinger.utils.audio import save_wav
         # set_hparams(print_hparams=False)
         infer_ins = cls(hparams)
         out = infer_ins.infer_once(inp)

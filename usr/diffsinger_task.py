@@ -1,20 +1,20 @@
 import torch
 
-import utils
-from utils.hparams import hparams
+import diffsinger.utils as utils
+from diffsinger.utils.hparams import hparams
 from .diff.net import DiffNet
 from .diff.shallow_diffusion_tts import GaussianDiffusion, OfflineGaussianDiffusion
 from .diffspeech_task import DiffSpeechTask
-from vocoders.base_vocoder import get_vocoder_cls, BaseVocoder
-from modules.fastspeech.pe import PitchExtractor
-from modules.fastspeech.fs2 import FastSpeech2
-from modules.diffsinger_midi.fs2 import FastSpeech2MIDI
-from modules.fastspeech.tts_modules import mel2ph_to_dur
+from diffsinger.vocoders.base_vocoder import get_vocoder_cls, BaseVocoder
+from diffsinger.modules.fastspeech.pe import PitchExtractor
+from diffsinger.modules.fastspeech.fs2 import FastSpeech2
+from diffsinger.modules.diffsinger_midi.fs2 import FastSpeech2MIDI
+from diffsinger.modules.fastspeech.tts_modules import mel2ph_to_dur
 
-from usr.diff.candidate_decoder import FFT
-from utils.pitch_utils import denorm_f0
-from tasks.tts.fs2_utils import FastSpeechDataset
-from tasks.tts.fs2 import FastSpeech2Task
+from diffsinger.usr.diff.candidate_decoder import FFT
+from diffsinger.utils.pitch_utils import denorm_f0
+from diffsinger.tasks.tts.fs2_utils import FastSpeechDataset
+from diffsinger.tasks.tts.fs2 import FastSpeech2Task
 
 import numpy as np
 import os

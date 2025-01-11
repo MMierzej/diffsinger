@@ -1,10 +1,10 @@
 import torch
 
-import utils
+import diffsinger.utils as utils
 from .diff.diffusion import GaussianDiffusion
 from .diff.net import DiffNet
-from tasks.tts.fs2 import FastSpeech2Task
-from utils.hparams import hparams
+from diffsinger.tasks.tts.fs2 import FastSpeech2Task
+from diffsinger.utils.hparams import hparams
 
 
 DIFF_DECODERS = {

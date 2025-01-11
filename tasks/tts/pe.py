@@ -5,14 +5,14 @@ import torch
 import numpy as np
 import os
 
-from tasks.base_task import BaseDataset
-from tasks.tts.fs2 import FastSpeech2Task
-from modules.fastspeech.pe import PitchExtractor
-import utils
-from utils.indexed_datasets import IndexedDataset
-from utils.hparams import hparams
-from utils.plot import f0_to_figure
-from utils.pitch_utils import norm_interp_f0, denorm_f0
+from diffsinger.tasks.base_task import BaseDataset
+from diffsinger.tasks.tts.fs2 import FastSpeech2Task
+from diffsinger.modules.fastspeech.pe import PitchExtractor
+import diffsinger.utils as utils
+from diffsinger.utils.indexed_datasets import IndexedDataset
+from diffsinger.utils.hparams import hparams
+from diffsinger.utils.plot import f0_to_figure
+from diffsinger.utils.pitch_utils import norm_interp_f0, denorm_f0
 
 
 class PeDataset(BaseDataset):
