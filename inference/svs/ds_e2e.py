@@ -1,9 +1,11 @@
+import uuid
 import torch
 # from diffsinger.inference.tts.fs import FastSpeechInfer
 # from diffsinger.modules.tts.fs2_orig import FastSpeech2Orig
 from diffsinger.inference.svs.base_svs_infer import BaseSVSInfer
 from diffsinger.utils import load_ckpt
-from diffsinger.utils.hparams import hparams
+from diffsinger.utils.audio import save_wav
+from diffsinger.utils.hparams import hparams, set_hparams
 from diffsinger.usr.diff.shallow_diffusion_tts import GaussianDiffusion
 from diffsinger.usr.diffsinger_task import DIFF_DECODERS
 from diffsinger.modules.fastspeech.pe import PitchExtractor
@@ -11,6 +13,19 @@ import diffsinger.utils as utils
 
 
 class DiffSingerE2EInfer(BaseSVSInfer):
+    def __init__(self, config_path, exp_name):
+        super().__init__(hparams)
+        self.config_path = config_path
+        self.exp_name = exp_name
+
+    def infer(self, input_ds, out_dir="diffsinger_output"):
+        set_hparams(config=self.config_path, exp_name=self.exp_name, print_hparams=False)
+        wav = self.infer_once(input_ds)
+        os.makedirs(out_dir, exist_ok=True)
+        output_path = f"{out_dir}/{uuid.uuid4()}.wav"
+        save_wav(wav, output_path, self.hparams['audio_sample_rate'])
+        return wav, output_path
+
     def build_model(self):
         model = GaussianDiffusion(
             phone_encoder=self.ph_encoder,
