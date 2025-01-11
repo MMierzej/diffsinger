@@ -1,0 +1,6 @@
+pypinyin
+pycwt
+praat-parselmouth
+webrtcvad
+pyloudnorm
+pytorch-lightning==2.1.4
