@@ -1,3 +1,4 @@
+import os
 import uuid
 import torch
 # from diffsinger.inference.tts.fs import FastSpeechInfer
