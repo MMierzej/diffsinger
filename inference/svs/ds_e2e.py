@@ -3,8 +3,7 @@ import torch
 # from diffsinger.modules.tts.fs2_orig import FastSpeech2Orig
 from diffsinger.inference.svs.base_svs_infer import BaseSVSInfer
 from diffsinger.utils import load_ckpt
-from diffsinger.utils.audio import save_wav
-from diffsinger.utils.hparams import hparams, set_hparams
+from diffsinger.utils.hparams import hparams
 from diffsinger.usr.diff.shallow_diffusion_tts import GaussianDiffusion
 from diffsinger.usr.diffsinger_task import DIFF_DECODERS
 from diffsinger.modules.fastspeech.pe import PitchExtractor
