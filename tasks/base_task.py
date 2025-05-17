@@ -12,7 +12,7 @@ import random
 import sys
 import numpy as np
 import torch.distributed as dist
-from pytorch_lightning.loggers import TensorBoardLogger
+# from pytorch_lightning.loggers import TensorBoardLogger
 from diffsinger.utils.pl_utils import LatestModelCheckpoint, BaseTrainer, data_loader, DDP
 from torch import nn
 import torch.utils.data
@@ -234,11 +234,12 @@ class BaseTask(nn.Module):
                                   save_best=hparams['save_best'],
                                   period=1 if hparams['save_ckpt'] else 100000
                               ),
-                              logger=TensorBoardLogger(
-                                  save_dir=work_dir,
-                                  name='lightning_logs',
-                                  version='lastest'
-                              ),
+                            #   logger=TensorBoardLogger(
+                            #       save_dir=work_dir,
+                            #       name='lightning_logs',
+                            #       version='lastest'
+                            #   ),
+                              logger=None,
                               gradient_clip_val=hparams['clip_grad_norm'],
                               val_check_interval=hparams['val_check_interval'],
                               row_log_interval=hparams['log_interval'],
